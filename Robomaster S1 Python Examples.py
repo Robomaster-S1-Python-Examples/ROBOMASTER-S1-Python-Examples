@@ -1565,6 +1565,96 @@ def sound_recognized_applause_thrice(msg):
     
 '''----------------------------------------------------------------------------------------------------------------------------------------------------'''
 
+# slap or tap Robomaster's hit detectors and make the leds turn red for .3 seconds. See what happens
+# when you type and execute/run the program example below.
+
+armor=armor_ctrl
+media=media_ctrl
+led=led_ctrl
+define=rm_define
+led1,led2=0,255
+seconds=.3
+
+def start():
+
+    armor.set_hit_sensitivity(8)
+
+    while True:
+
+        led.set_top_led(define.armor_top_all,led2,led2,led2,define.effect_always_on)
+        led.set_bottom_led(define.armor_bottom_all,led2,led2,led2,define.effect_always_on)
+        
+        armor.cond_wait(define.cond_armor_bottom_front_hit)
+        armor.cond_wait(define.cond_armor_bottom_back_hit)
+        armor.cond_wait(define.cond_armor_bottom_right_hit)
+        armor.cond_wait(define.cond_armor_bottom_left_hit)
+
+def armor_hit_detection_bottom_front(msg):        
+    media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+    led.set_bottom_led(define.armor_bottom_front,led2,led1,led1,define.effect_always_on)
+    time.sleep(seconds)
+    led.set_bottom_led(define.armor_bottom_front,led2,led2,led2,define.effect_always_on)
+    
+def armor_hit_detection_bottom_back(msg):
+    media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+    led.set_bottom_led(define.armor_bottom_back,led2,led1,led1,define.effect_always_on)
+    time.sleep(seconds)
+    led.set_bottom_led(define.armor_bottom_back,led2,led2,led2,define.effect_always_on)
+    
+def armor_hit_detection_bottom_right(msg):
+    media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+    led.set_bottom_led(define.armor_bottom_right,led2,led1,led1,define.effect_always_on)
+    time.sleep(seconds)
+    led.set_bottom_led(define.armor_bottom_right,led2,led2,led2,define.effect_always_on)
+    
+def armor_hit_detection_bottom_left(msg):
+    media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+    led.set_bottom_led(define.armor_bottom_left,led2,led1,led1,define.effect_always_on)
+    time.sleep(seconds)
+    led.set_bottom_led(define.armor_bottom_left,led2,led2,led2,define.effect_always_on)
+    
+'''----------------------------------------------------------------------------------------------------------------------------------------------------'''
+
+# Here is the very same program example below as the one above. The only difference is there are
+# no 'def' functions or armor wait commands.
+
+armor=armor_ctrl
+media=media_ctrl
+led=led_ctrl
+define=rm_define
+led1,led2=0,255
+seconds=.3
+
+def start():
+
+    armor.set_hit_sensitivity(8)
+
+    while True:
+        led.set_top_led(define.armor_top_all,led2,led2,led2,define.effect_always_on)
+        led.set_bottom_led(define.armor_bottom_all,led2,led2,led2,define.effect_always_on)
+        
+        if armor.check_condition(rm_define.cond_armor_bottom_front_hit):
+            media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+            led.set_bottom_led(define.armor_bottom_front,led2,led1,led1,define.effect_always_on)
+            time.sleep(seconds)
+
+        if armor.check_condition(rm_define.cond_armor_bottom_back_hit):
+            media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+            led.set_bottom_led(define.armor_bottom_back,led2,led1,led1,define.effect_always_on)
+            time.sleep(seconds)
+
+        if armor.check_condition(rm_define.cond_armor_bottom_right_hit):
+            media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+            led.set_bottom_led(define.armor_bottom_right,led2,led1,led1,define.effect_always_on)
+            time.sleep(seconds)
+
+        if armor.check_condition(rm_define.cond_armor_bottom_left_hit):
+            media.play_sound(define.media_sound_attacked,wait_for_complete_flag=False)
+            led.set_bottom_led(define.armor_bottom_left,led2,led1,led1,define.effect_always_on)
+            time.sleep(seconds)
+            
+'''----------------------------------------------------------------------------------------------------------------------------------------------------'''
+
 # More future Robomaster s1 Python examples still to come as I learn more and more, each and every day.
 
 '''----------------------------------------------------------------------------------------------------------------------------------------------------'''
