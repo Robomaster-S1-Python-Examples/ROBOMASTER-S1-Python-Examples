@@ -1,5 +1,4 @@
-# ROBOMASTER-S1-Python-Examples
-
+# README
 Learning how to program the Robomaster S1 in Python
 
 Note: you must install the Robomaster S1 app, either on your wireless mobile device or on your computer, via Wi-Fi.
