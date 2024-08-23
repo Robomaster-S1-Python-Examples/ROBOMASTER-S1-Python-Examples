@@ -48,7 +48,7 @@ define_effect=(
     rm_define.effect_breath,     #index[3]
     rm_define.effect_marquee)    #index[4]
 
-rgb1,rgb2=0,55 # dim and change all rgb colours by changing the values: '0' and '255'
+rgb1,rgb2=0,255 # dim and change all rgb colours by changing the values: '0' and '255'
 delay=.000000001,.1,1
 
 RGB_COLOURS=[
