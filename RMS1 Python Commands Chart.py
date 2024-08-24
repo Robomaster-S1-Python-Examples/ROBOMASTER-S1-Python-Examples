@@ -25,6 +25,12 @@
 # unit. Therefore, I do not recommend using Python threading
 # for any of Robomaster S1's physical parts, including the RGBs.
 
+# Note: do not remove the tripple quote marks. if you do,
+# the Python commands will execute when you run your program.
+# Only copy and paste them into actual Pythn code, do not
+# remove any tripple quote marks...
+
+'''
 robot_ctrl.set_mode(rm_define.robot_mode_free)
 robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
 robot_ctrl.set_mode(rm_define.robot_mode_chassis_follow)
@@ -64,8 +70,8 @@ rm_define.effect_marquee
 sensor_adapter_ctrl.cond_wait(rm_define.cond_sensor_adapter1_port1_low_event)
 sensor_adapter_ctrl.cond_wait(rm_define.cond_sensor_adapter1_port1_high_event)
 
-tools.timer_ctrl(rm_define.timer_start),
-tools.timer_ctrl(rm_define.timer_stop),
+tools.timer_ctrl(rm_define.timer_start)
+tools.timer_ctrl(rm_define.timer_stop)
 tools.timer_ctrl(rm_define.timer_reset)
 
 chassis_ctrl.set_pwm_value(rm_define.pwm_all,7.5)
@@ -85,13 +91,13 @@ chassis_ctrl.set_follow_gimbal_offset(0)
 chassis_ctrl.set_trans_speed(0.5)
 chassis_ctrl.set_rotate_speed(30)
 chassis_ctrl.set_wheel_speed(100,100,100,100)
-'''
+
 chassis_ctrl.set_wheel_speed(
 100, Front Left
 100, Front Right
 100, Back Left
 100) Back Right
-'''
+
 chassis_ctrl.move(0),
 chassis_ctrl.move_with_time(0,1)
 chassis_ctrl.move_with_distance(0,1)
@@ -454,7 +460,7 @@ define_effect=(
     rm_define.effect_flash,      #index[2]
     rm_define.effect_breath,     #index[3]
     rm_define.effect_marquee)    #index[4]
-
+'''
 # RGB Tuple Colour Guide:
 
 rgb1,rgb2=0,255 # dim and change all rgb colours by changing the values: '0' and '255'
