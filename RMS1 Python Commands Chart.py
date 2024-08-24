@@ -417,3 +417,139 @@ def sensor_adapter1_port1_high_event(msg):
 
 def sensor_adapter1_port1_low_event(msg):
     pass
+
+# RGB tuple items with their tuple indexes:
+
+led_set_top_bottom=(
+    led_ctrl.set_top_led,    #index[0]
+    led_ctrl.set_bottom_led, #index[1]
+    led_ctrl.set_single_led, #index[2]
+    led_ctrl.turn_off(rm_define.armor_all),    #index[3]
+    led_ctrl.set_flash(rm_define.armor_all,6)) #index[4]
+
+gun_led_on_off=(
+    led_ctrl.gun_led_off, #index[0]
+    led_ctrl.gun_led_on)  #index[1]
+
+define_armor_top_bottom_all=(
+    rm_define.armor_top_all,    #index[0]
+    rm_define.armor_bottom_all, #index[1]
+    rm_define.armor_all)        #index[2]
+
+define_armor_top_right_left=(
+    rm_define.armor_top_right, #index[0]
+    rm_define.armor_top_left)  #index[1]
+
+define_armor_bottom_right_left=(
+    rm_define.armor_bottom_right, #index[0]
+    rm_define.armor_bottom_left)  #index[1]
+
+define_armor_bottom_front_back=(
+    rm_define.armor_bottom_front, #index[0]
+    rm_define.armor_bottom_back)  #index[1]
+
+define_effect=(
+    rm_define.effect_always_off, #index[0]
+    rm_define.effect_always_on,  #index[1]
+    rm_define.effect_flash,      #index[2]
+    rm_define.effect_breath,     #index[3]
+    rm_define.effect_marquee)    #index[4]
+
+# RGB Tuple Colour Guide:
+
+rgb1,rgb2=0,255 # dim and change all rgb colours by changing the values: '0' and '255'
+
+RGB_COLOURS=[
+    [],               # empty list box
+    [rgb2,rgb2,rgb2], # RGB White
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    ]
+
+RGB_RY=[
+    [],               # empty list box
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    ]
+
+RGB_YR=[
+    [],               # empty list box
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb2,rgb1,rgb1], # RGB Red
+    ]
+
+RGB_BG=[
+    [],               # empty list box
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    ]
+
+RGB_GB=[
+    [],               # empty list box
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb1,rgb1,rgb2], # RGB Blue
+    ]
+
+RGB_PC=[
+    [],               # empty list box
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    ]
+
+RGB_CP=[
+    [],               # empty list box
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    [rgb1,rgb2,rgb2], # RGB Cyan
+    [rgb2,rgb1,rgb2], # RGB Pink
+    ]
+
+RGB_RYBG=[
+    [],               # empty list box
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    [rgb2,rgb1,rgb1], # RGB Red
+    [rgb2,rgb2,rgb1], # RGB Yellow
+    [rgb1,rgb1,rgb2], # RGB Blue
+    [rgb1,rgb2,rgb1], # RGB Green
+    ]
