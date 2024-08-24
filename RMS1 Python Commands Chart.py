@@ -29,7 +29,6 @@
 # the Python commands will execute when you run your program.
 # Only copy and paste them into actual Pythn code, do not
 # remove any tripple quote marks...
-
 '''
 robot_ctrl.set_mode(rm_define.robot_mode_free)
 robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
