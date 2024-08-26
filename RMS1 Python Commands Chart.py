@@ -25,10 +25,10 @@
 # unit. Therefore, I do not recommend using Python threading
 # for any of Robomaster S1's physical parts, including the RGBs.
 
-# Note: do not remove the tripple quote marks. if you do,
+# Note: do not remove the triple quote marks. if you do,
 # the Python commands will execute when you run your program.
 # Only copy and paste them into actual Pythn code, do not
-# remove any tripple quote marks...
+# remove any triple quote marks...
 '''
 robot_ctrl.set_mode(rm_define.robot_mode_free)
 robot_ctrl.set_mode(rm_define.robot_mode_gimbal_follow)
