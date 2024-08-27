@@ -17,9 +17,8 @@ led_set_top_bottom=(
     led_ctrl.set_top_led,    #index[0]
     led_ctrl.set_bottom_led, #index[1]
     led_ctrl.set_single_led, #index[2]
-    led_ctrl.turn_off(rm_define.armor_all),    #index[3]
-    led_ctrl.set_flash(rm_define.armor_all,6)) #index[4]
-
+    led_ctrl.set_flash(rm_define.armor_all,6)) #index[3]
+    
 gun_led_on_off=(
     led_ctrl.gun_led_off, #index[0]
     led_ctrl.gun_led_on)  #index[1]
@@ -47,6 +46,8 @@ define_effect=(
     rm_define.effect_flash,      #index[2]
     rm_define.effect_breath,     #index[3]
     rm_define.effect_marquee)    #index[4]
+
+led_ctrl.turn_off(rm_define.armor_all)
 
 rgb1,rgb2=0,255 # dim and change all rgb colours by changing the values: '0' and '255'
 delay=.000000001,.1,.5
@@ -306,7 +307,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_quad_red_yellow_rotate_forward_reverse(): # function index[12]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             for j in range(1,3):
                 gun_led_on_off[1]()
@@ -324,7 +325,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_quad_blue_green_rotate_forward_reverse(): # function index[13]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             gun_led_on_off[1]()
             for j in range(1,3):
@@ -342,7 +343,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_quad_pink_cyan_rotate_forward_reverse(): # function index[14]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             gun_led_on_off[1]()
             for j in range(1,3):
@@ -827,7 +828,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_trail_chasers_red_yellow_forward_reverse_random(): # function index[38]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             randcount=random.randint(1,9)
             led_set_top_bottom[1](define_armor_top_bottom_all[1],rgb2,rgb1,rgb1,define_effect[2])
@@ -856,7 +857,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_trail_chasers_blue_green_forward_reverse_random(): # function index[39]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             randcount=random.randint(1,9)
             led_set_top_bottom[1](define_armor_top_bottom_all[1],rgb1,rgb1,rgb2,define_effect[2])
@@ -885,7 +886,7 @@ def start():
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_trail_chasers_pink_cyan_forward_reverse_random(): # function index[40]
 
-        led_set_top_bottom[4]
+        led_set_top_bottom[3]
         while True:
             randcount=random.randint(1,9)
             led_set_top_bottom[1](define_armor_top_bottom_all[1],rgb2,rgb1,rgb2,define_effect[2])
@@ -968,4 +969,4 @@ def start():
         rgb_trail_chasers_blue_green_forward_reverse_random, # function index[39]
         rgb_trail_chasers_pink_cyan_forward_reverse_random)  # function index[40]
 
-    RGB_template_function_tuple[40]() # choose your RGB template tuple index[n]
+    RGB_template_function_tuple[0]() # choose your RGB template tuple index[n]
