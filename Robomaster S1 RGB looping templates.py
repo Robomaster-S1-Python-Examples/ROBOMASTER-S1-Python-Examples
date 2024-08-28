@@ -751,7 +751,7 @@ def start():
     def rgb_double_red_yellow_spin_forward_reverse_random(): # function index[35]
 
         while True:
-            randcount=random.randint(0,7)
+            randcount=random.randint(0,8)
             for i in range(randcount):
                 gun_led_on_off[1]()
                 for x in range(4):
@@ -777,7 +777,7 @@ def start():
     def rgb_double_blue_green_spin_forward_reverse_random(): # function index[36]
 
         while True:
-            randcount=random.randint(0,7)
+            randcount=random.randint(0,8)
             for i in range(randcount):
                 gun_led_on_off[1]()
                 for x in range(4):
@@ -803,7 +803,7 @@ def start():
     def rgb_double_pink_cyan_spin_forward_reverse_random(): # function index[37]
 
         while True:
-            randcount=random.randint(0,7)
+            randcount=random.randint(0,8)
             for i in range(randcount):
                 gun_led_on_off[1]()
                 for x in range(4):
@@ -969,4 +969,4 @@ def start():
         rgb_trail_chasers_blue_green_forward_reverse_random, # function index[39]
         rgb_trail_chasers_pink_cyan_forward_reverse_random)  # function index[40]
 
-    RGB_template_function_tuple[0]() # choose your RGB template tuple index[n]
+    RGB_template_function_tuple[39]() # choose your RGB template tuple index[n]
