@@ -263,7 +263,7 @@ def start():
                 led_set_top_bottom[2](define_armor_top_bottom_all[0],[i+1,i+5],define_effect[1])
                 led_set_top_bottom[1](define_armor_top_bottom_all[1],
                 RGB_PC[i+1][0],RGB_PC[i+1][1],RGB_PC[i+1][2],define_effect[1])
-                time.sleep(delay[1]);
+                time.sleep(delay[1])
                 gun_led_on_off[0]()
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     def rgb_double_red_yellow_spin_reverse(): # function index[9]
