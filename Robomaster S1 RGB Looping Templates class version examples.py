@@ -1152,4 +1152,4 @@ def start():
 
     RGB_colour_trail_blazer_forward_reverse_random=m.rgb1,m.rgb2,m.rgb3
 
-    RGB_double_colour_spin_forward_reverse_random[2]() # choose your RGB template class and index[n] value
+    RGB_double_colour_spin_forward_reverse_random[0]() # choose your RGB template class and index[n] value
