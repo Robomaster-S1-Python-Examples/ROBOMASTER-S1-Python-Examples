@@ -971,4 +971,4 @@ def start():
         rgb_colour_trail_blazer_blue_green_forward_reverse_random, # function index[39]
         rgb_colour_trail_blazer_pink_cyan_forward_reverse_random)  # function index[40]
 
-    RGB_template_function_tuple[0]() # choose your RGB template tuple index[n]
+    RGB_template_function_tuple[0]() # choose your RGB template tuple index[n] value
