@@ -9,6 +9,8 @@
 # on and off separately, but they cannot be colour changed
 # separately.
 
+# Robomaster S1 RGB Looping Templates tuple version examples:
+
 # Created by Joseph C. Richardson, GitHub.com
 
 # Use these tuple index values to shorten all rgb Python commands.
