@@ -13,7 +13,7 @@
 
 # Created by Joseph C. Richardson, GitHub.com
 
-# Use these tuple index values to shorten all RGB Python commands.
+# Use these tuple index values to shorten all rgb Python commands.
 
 led_set_top_bottom=(
     led_ctrl.set_top_led,    #index[0]
@@ -1160,6 +1160,16 @@ def start():
     # blue_green = rgb2
     # pink_cyan: = rgb3
 
-    # select a class along with its colour index[n] value range, 0 through 2
+    # select a class along with its colour index[n] value range:
+    # 0 through 1, 0 through 2 and 0 through 7
 
-    RGB_single_colour_spin_forward[0]() # choose your RGB template class and colour index[n] value
+    # Create a try and except handler that will execute when a class name and/or index[n] value exceeds
+    # the range limit, which then executes the very first class name and and index[n] value: 0. Note:
+    # index[n] values always start at index[0] through index[n]. Note: the try and except handler needs
+    # no except: handler type; the Robomaster S1 app has no, such except: handler types at all.
+
+    try:
+        RGB_double_colour_spin_forward[2]() # choose your RGB template class and colour index[n] value
+    except:
+        print('class name and/or index[n] value not found:')
+        RGB_single_colour_spin_forward[0]() # class name defaults back to RGB_single_colour_spin_forward[0]
