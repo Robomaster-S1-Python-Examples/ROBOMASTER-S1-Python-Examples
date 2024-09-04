@@ -13,7 +13,7 @@
 
 # Created by Joseph C. Richardson, GitHub.com
 
-# Use these tuple index values to shorten all rgb Python commands.
+# Use these tuple index values to shorten all RGB Python commands.
 
 led_set_top_bottom=(
     led_ctrl.set_top_led,    #index[0]
@@ -1128,6 +1128,8 @@ def start():
     rgb_colour_trail_blazer_blue_green_forward_reverse_random,
     rgb_colour_trail_blazer_pink_cyan_forward_reverse_random)
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # each class creates different RGB looping effects
+    
     RGB_single_colour_spin_forward=a.rgb1,a.rgb2,a.rgb3
     RGB_single_colour_spin_reverse=b.rgb1,b.rgb2,b.rgb3
 
@@ -1151,5 +1153,13 @@ def start():
     RGB_double_colour_spin_forward_reverse_random=l.rgb1,l.rgb2,l.rgb3
 
     RGB_colour_trail_blazer_forward_reverse_random=m.rgb1,m.rgb2,m.rgb3
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # RGB colour value range: rgb1, rgb2, rgb3
 
-    RGB_double_colour_spin_forward_reverse_random[0]() # choose your RGB template class and index[n] value
+    # red_yellow = rgb1
+    # blue_green = rgb2
+    # pink_cyan: = rgb3
+
+    # select a class along with its colour index[n] value range, 0 through 2
+
+    RGB_single_colour_spin_forward[0]() # choose your RGB template class and colour index[n] value
