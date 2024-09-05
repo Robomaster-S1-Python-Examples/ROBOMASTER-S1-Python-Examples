@@ -1,5 +1,5 @@
 # Use these Robomaster S1 RGB looping templates in your next
-# Robomaster S1 Python programs. There are 40 RGB effects to
+# Robomaster S1 Python programs. There are 41 RGB effects to
 # choose from. This Robomaster S1 RGB looping template will
 # also teach you that RGB looping with the Robomaster S1 is
 # just so much fun!! Note: the gimbal RGBs cannot be separate;
@@ -1161,7 +1161,7 @@ def start():
     # handler needs no except: handler type; the Robomaster S1 app has no, such except: handler types at all.
     
     try:
-        classes[2]()
+        classes[0]() # choose your RGB template classes index[n] value
     except:
         print('clases tuple name and/or index[n] value not found:')
-        classes[0]() # classes tuple name defaults back to RGB_single_colour_spin_forward[0]
+        classes[0]() # classes tuple name and index[n] value defaults back to classes[0]
