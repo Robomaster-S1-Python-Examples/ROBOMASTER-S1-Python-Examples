@@ -1,5 +1,5 @@
 # Use these Robomaster S1 RGB looping templates in your next
-# Robomaster S1 Python programs. There are 40 RGB effects to
+# Robomaster S1 Python programs. There are 41 RGB effects to
 # choose from. This Robomaster S1 RGB looping template will
 # also teach you that RGB looping with the Robomaster S1 is
 # just so much fun!! Note: the gimbal RGBs cannot be separate;
@@ -970,5 +970,19 @@ def start():
         rgb_colour_trail_blazer_red_yellow_forward_reverse_random, # function index[38]
         rgb_colour_trail_blazer_blue_green_forward_reverse_random, # function index[39]
         rgb_colour_trail_blazer_pink_cyan_forward_reverse_random)  # function index[40]
+    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+    # invoke the length() function that prints out how many tuple index[n] values there are    
 
-    RGB_template_function_tuple[0]() # choose your RGB template tuple index[n] value
+    print(len(RGB_template_function_tuple),'RGB classes:')
+
+    # Create a try and except handler that will execute when the RGB_template_function_tuple name and/or
+    # index[n] value exceeds the range limit, which then executes the very first index[n]; the function tuple 
+    # name and index[n] value: 0. Note: index[n] values always start at index[0] through index[n]. Note: the
+    # try and except handler needs no except: handler type; the Robomaster S1 app has no, such except: handler
+    # types at all.
+
+    try:
+        RGB_template_function_tuple[0]() # choose your RGB template tuple index[n] value
+    except:
+        print('tuple name and/or index[n] value not found:')
+        RGB_template_function_tuple[0]() # tuple name and index[n] value defaults back to RGB_template_function_tuple[0]
