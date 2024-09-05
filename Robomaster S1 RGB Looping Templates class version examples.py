@@ -1164,9 +1164,9 @@ def start():
     # 0 through 1, 0 through 2 and 0 through 7
 
     # Create a try and except handler that will execute when a class name and/or index[n] value exceeds
-    # the range limit, which then executes the very first class name and and index[n] value: 0. Note:
-    # index[n] values always start at index[0] through index[n]. Note: the try and except handler needs
-    # no except: handler type; the Robomaster S1 app has no, such except: handler types at all.
+    # the range limit, which then executes the very first class name and index[n] value: 0. Note: index[n]
+    # values always start at index[0] through index[n]. Note: the try and except handler needs no except:
+    # handler type; the Robomaster S1 app has no, such except: handler types at all.
 
     try:
         RGB_double_colour_spin_forward[2]() # choose your RGB template class and colour index[n] value
