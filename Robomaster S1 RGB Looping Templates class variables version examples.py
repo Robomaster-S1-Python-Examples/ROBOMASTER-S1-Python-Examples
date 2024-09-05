@@ -1151,14 +1151,14 @@ def start():
         l.rgb1, #index[11] RGB_double_colour_spin_forward_reverse_random
         m.rgb1) #index[12] RGB_colour_trail_blazer_forward_reverse_random
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-    # invoke the length() function that prints out how many class variable index values there are    
+    # invoke the length() function that prints out how many class variable index[n] values there are    
 
     print(len(classes),'RGB classes:')
 
-    # Create a try and except handler that will execute when a class name and/or index[n] value exceeds
-    # the range limit, which then executes the very first class name and and index[n] value: 0. Note:
-    # index[n] values always start at index[0] through index[n]. Note: the try and except handler needs
-    # no except: handler type; the Robomaster S1 app has no, such except: handler types at all.
+    # Create a try and except handler that will execute when the classes variable name and/or index[n]
+    # value exceeds the range limit, which then executes the very first classes variable name and index[n]
+    # value: 0. Note: index[n] values always start at index[0] through index[n]. Note: the try and except
+    # handler needs no except: handler type; the Robomaster S1 app has no, such except: handler types at all.
     
     try:
         classes[2]()
