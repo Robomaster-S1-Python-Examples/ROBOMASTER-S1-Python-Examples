@@ -1,3 +1,4 @@
+
 # Use these Robomaster S1 RGB looping templates in your next
 # Robomaster S1 Python programs. There are 40 RGB effects to
 # choose from. This Robomaster S1 RGB looping template will
