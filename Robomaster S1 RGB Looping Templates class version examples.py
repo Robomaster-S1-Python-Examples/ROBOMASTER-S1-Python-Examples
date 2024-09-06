@@ -996,6 +996,7 @@ def start():
     rgb_quad_pink_cyan_colour_rotate_forward_reverse)
     ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
     class RGB_flash_colour_changers_and_smooth_shift_colour_change_contrast:
+        
         def __init__(self,
         rgb_flash_colour_changers_forward_reverse,
         rgb_smooth_shift_colour_change_contrast):
