@@ -1,4 +1,4 @@
-# EP Core Robot & Robomaster S1 Robot Command Sets
+# Robomaster EP Core Robot and Robomaster S1 Robot Command Sets
 
 # Created by Joseph C. Richardson, GitHub.com
 
@@ -207,7 +207,7 @@ chassis_ctrl.move_with_speed(0.5,0.5,30)
 chassis_ctrl.stop()
 
 def chassis_impact_detection(msg):
-pass
+    pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Gimbal
 
@@ -500,10 +500,10 @@ media_ctrl.cond_wait(rm_define.cond_sound_recognized_applause_thrice)
 
 
 def vision_recognized_people(msg):
-pass
+    pass
 
 def sound_recognized_applause_twice(msg):
-pass
+    pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Armor
 
@@ -538,7 +538,7 @@ ir_distance_sensor_ctrl.cond_wait("ir_distance_4_ge_10")
 ir_distance_sensor_ctrl.cond_wait("ir_distance_4_le_10")
 
 def ir_distance_1_ge_10_event(msg):
-pass
+    pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Sensor Adapter
 
@@ -546,7 +546,7 @@ sensor_adapter_ctrl.cond_wait(rm_define.cond_sensor_adapter6_port2_high_event)
 
 
 def sensor_adapter1_port1_high_event(msg):
-pass
+    pass
 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 # Media
 
@@ -593,22 +593,27 @@ media_ctrl.record(1)
 
 time.sleep(1)
 
+
 for count in range(10):
-pass
+    pass
+
 
 while True:
-pass
+    pass
 
 if False:
-pass
+    pass
+
 
 if False:
-pass
+    pass
 else:
-pass
+    pass
+
 
 while not False:
-pass
+    pass
+
 
 rmexit()
 
